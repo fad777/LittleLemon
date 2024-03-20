@@ -2,6 +2,14 @@ from django.db import models
 
 # Create your models here.
 
+from django.contrib.auth.models import User
+from rest_framework import serializers
+
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ['url', 'username', 'email', 'groups']
+
 class booking(models.Model):
     """Maps to the Booking Table"""
     id = models.AutoField(primary_key=True,default="1")
