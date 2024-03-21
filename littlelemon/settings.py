@@ -30,6 +30,8 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+DJOSER={"USER_ID_FIELD":"username"}
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -38,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'rest_framework.authtoken',
+    'djoser',
 
     'restaurant',
 ]
